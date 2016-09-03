@@ -24,6 +24,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static boolean hide = false;
+
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -167,10 +169,17 @@ public class MainActivity extends AppCompatActivity {
     //start quiz activity here
     public void startQuiz(View view) {
         //Toast.makeText(getApplicationContext(), "Test!", Toast.LENGTH_SHORT).show();
+        TextView firstQuiz = (TextView) findViewById(R.id.testQuiz);
+        firstQuiz.setVisibility(View.GONE);
+        hide = true;
+        FinishQuiz.showText();
         Intent intent = new Intent(this, Quiz.class);
-        //TextView firstQuiz = (TextView) findViewById(R.id.testQuiz);
-        //firstQuiz.setVisibility(View.GONE);
         startActivity(intent);
+
+    }
+
+    public static boolean hideBool() {
+        return hide;
     }
 
 }

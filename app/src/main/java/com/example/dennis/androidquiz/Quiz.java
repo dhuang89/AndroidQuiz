@@ -17,10 +17,8 @@ public class Quiz extends AppCompatActivity {
 
     //finish quiz activity here
     public void finishQuiz(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        //setContentView(R.layout.activity_main);
-//        TextView done = (TextView) findViewById(R.id.textView4);
-//        done.setVisibility(View.VISIBLE);
-        startActivity(intent);
+//        Intent intent = new Intent(this, MainActivity.class);
+//        startActivity(intent);
+        finish();
     }
 }
