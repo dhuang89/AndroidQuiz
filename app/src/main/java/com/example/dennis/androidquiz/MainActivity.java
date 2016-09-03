@@ -168,7 +168,6 @@ public class MainActivity extends AppCompatActivity {
 
     //start quiz activity here
     public void startQuiz(View view) {
-        //Toast.makeText(getApplicationContext(), "Test!", Toast.LENGTH_SHORT).show();
         TextView firstQuiz = (TextView) findViewById(R.id.testQuiz);
         firstQuiz.setVisibility(View.GONE);
         hide = true;
@@ -182,4 +181,8 @@ public class MainActivity extends AppCompatActivity {
         return hide;
     }
 
+    public void showScore(View view) {
+        TextView quizName = (TextView) view;
+        Toast.makeText(getApplicationContext(), "Quiz name: " + quizName.getText().toString() + "\nScore: Passed", Toast.LENGTH_LONG).show();
+    }
 }

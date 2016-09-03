@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by Dennis on 8/31/16.
@@ -25,5 +26,6 @@ public class FinishQuiz extends Fragment {
             done.setVisibility(View.VISIBLE);
         }
     }
+
 
 }
