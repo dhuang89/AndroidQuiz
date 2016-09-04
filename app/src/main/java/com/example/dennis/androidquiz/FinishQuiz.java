@@ -20,6 +20,7 @@ public class FinishQuiz extends Fragment {
         return rl;
     }
 
+    //shows the name of the quiz on the finished quiz tab
     public static void showText() {
         if (MainActivity.hideBool()) {
             TextView done = (TextView) rl.findViewById(R.id.textView4);

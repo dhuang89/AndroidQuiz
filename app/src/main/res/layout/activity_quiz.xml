@@ -9,6 +9,18 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.dennis.androidquiz.Quiz">
 
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:max="3"
+        android:minHeight="20dip"
+        android:maxHeight="20dip"
+        style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="133dp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,12 +28,13 @@
         android:text="Welcome to the Test Quiz!"
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="39dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Question 1"
+        android:text="Quiz progress:"
         android:id="@+id/textView2"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
@@ -33,22 +46,24 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Does this app work?"
         android:id="@+id/textView3"
-        android:layout_below="@+id/textView2"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/pb"
         android:layout_alignParentStart="true" />
 
 
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView3">
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true">
 
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Yes"
-            android:onClick="finishQuiz"
+            android:onClick="nextQuestion"
             android:id="@+id/button" />
 
         <Button
@@ -56,7 +71,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="No"
-            android:onClick="finishQuiz"
+            android:onClick="nextQuestion"
             android:id="@+id/button2" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go home"
+            android:id="@+id/button3"
+            android:layout_gravity="right"
+            android:visibility="invisible"
+            android:onClick="goHome"/>
+
     </RadioGroup>
+
 </RelativeLayout>

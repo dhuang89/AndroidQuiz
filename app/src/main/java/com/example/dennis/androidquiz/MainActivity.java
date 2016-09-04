@@ -167,6 +167,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //start quiz activity here
+    //also hides the quiz's name on the new quizzes tab
     public void startQuiz(View view) {
         TextView firstQuiz = (TextView) findViewById(R.id.testQuiz);
         firstQuiz.setVisibility(View.GONE);
@@ -181,8 +182,9 @@ public class MainActivity extends AppCompatActivity {
         return hide;
     }
 
+    //creates toast when user clicks on the quiz under the completed quizzes tab
     public void showScore(View view) {
         TextView quizName = (TextView) view;
-        Toast.makeText(getApplicationContext(), "Quiz name: " + quizName.getText().toString() + "\nScore: Passed", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Quiz name: " + quizName.getText().toString() + "\nResult: " + Quiz.getResults(), Toast.LENGTH_LONG).show();
     }
 }
