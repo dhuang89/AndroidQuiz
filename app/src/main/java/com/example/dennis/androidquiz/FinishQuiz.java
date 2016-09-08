@@ -28,5 +28,12 @@ public class FinishQuiz extends Fragment {
         }
     }
 
+    public static void showText2() {
+        if (MainActivity.hideBool()) {
+            TextView done = (TextView) rl.findViewById(R.id.textView5);
+            done.setVisibility(View.VISIBLE);
+        }
+    }
+
 
 }

@@ -178,6 +178,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void startQuiz2(View view) {
+        TextView firstQuiz = (TextView) findViewById(R.id.Quiz2);
+        firstQuiz.setVisibility(View.GONE);
+        hide = true;
+        FinishQuiz.showText2();
+        Intent intent = new Intent(this, Quiz2.class);
+        startActivity(intent);
+
+    }
+
     public static boolean hideBool() {
         return hide;
     }
@@ -186,5 +196,9 @@ public class MainActivity extends AppCompatActivity {
     public void showScore(View view) {
         TextView quizName = (TextView) view;
         Toast.makeText(getApplicationContext(), "Quiz name: " + quizName.getText().toString() + "\nResult: " + Quiz.getResults(), Toast.LENGTH_LONG).show();
+    }
+    public void showScore2(View view) {
+        TextView quizName = (TextView) view;
+        Toast.makeText(getApplicationContext(), "Quiz name: " + quizName.getText().toString() + "\nResult: " + Quiz2.getResults(), Toast.LENGTH_LONG).show();
     }
 }

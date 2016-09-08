@@ -9,11 +9,11 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-public class Quiz extends AppCompatActivity {
+public class Quiz2 extends AppCompatActivity {
 
-    public static String[] questions = {"Are you conscious?", "Do you feel emotions?", "Do you feel pain?", "Can you go swimming without destroying your body?", "Are you afraid of death?"};
+    public static String[] questions = {"Are you stupid?", "Do you feel dumb?", "Do you feel bad?", "Can you do math?", "Are you good at homework?"};
     public static int[] answers = {0, 0};
-    public static String[] results = {"Congratulations, you are human!", "Sorry, you are not human."};
+    public static String[] results = {"Congratulations, you are smart!", "Sorry, you are dumb."};
     public int i = 0;
     public static int resultIndex = 0;
     public int progressStatus = 1;
@@ -22,7 +22,7 @@ public class Quiz extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz);
+        setContentView(R.layout.activity_quiz2);
         ProgressBar pb = (ProgressBar) findViewById(R.id.pb);
         pb.setProgress(progressStatus);
 
